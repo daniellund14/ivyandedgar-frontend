@@ -125,7 +125,7 @@
                   class="rounded-circle img-fluid img-raised"
                 />
                 <h4 class="title">Eva Jenner</h4>
-                <p class="category text-primary">Fashion</p>
+                <p class="category text-primary">Australian Shepherd</p>
                 <p class="description">
                   It is clear that Ivy and Edgar is dedicated to finding quality breeders.
                   <a href="">Australian Breeders</a> was amazing throughout the whole process.
