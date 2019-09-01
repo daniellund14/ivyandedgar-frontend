@@ -32,8 +32,7 @@
       <div class="copyright">
         &copy; {{ year }}, Designed by
         <a href="https:///www.invisionapp.com" target="_blank" rel="noopener"
-          >Ivy and Edgar LLC</a
-        >. Coded by Daniel Lund
+          >Ivy and Edgar LLC</a>
       </div>
     </div>
   </footer>

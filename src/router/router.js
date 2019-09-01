@@ -1,25 +1,26 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Landing from '../pages/Landing.vue';
-import Login from '../pages/Login.vue';
-import Profile from '../pages/Profile.vue';
 import MainNavbar from '../layout/MainNavbar.vue';
 import MainFooter from '../layout/MainFooter.vue';
+import PageNotFound from '../pages/PageNotFound';
 
 Vue.use(Router);
 
 export default new Router({
   linkExactActiveClass: 'active',
+  mode: 'history',
   routes: [
     {
       path: '/',
       name: 'landing',
       components: { default: Landing, header: MainNavbar, footer: MainFooter },
       props: {
-        header: { colorOnScroll: 400 },
+        header: { colorOnScroll: 400, transparent: false},
         footer: { backgroundColor: 'black' }
       }
-    }
+    },
+    { path: "*", component: PageNotFound }
   ],
   scrollBehavior: to => {
     if (to.hash) {
