@@ -79,7 +79,7 @@
     </div>
     <div class="section section-team text-center">
       <div class="container">
-        <h2 class="title">What are customers say</h2>
+        <h2 class="title">What our customers say</h2>
         <div class="team">
           <div class="row">
             <div class="col-md-4">
