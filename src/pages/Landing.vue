@@ -82,57 +82,13 @@
         <h2 class="title">What our customers say</h2>
         <div class="team">
           <div class="row">
-            <div class="col-md-4">
-              <div class="team-player">
-                <img
-                  src="/static/img/macie.jpg"
-                  alt="Thumbnail Image"
-                  class="rounded-circle img-fluid img-raised"
-                />
-                <h4 class="title">Daniel Lund</h4>
-                <p class="category text-primary">Mini Golden Doodle</p>
-                <p class="description">
-                  This is the best site ever. We found Macie within hours of searching
-                  for our new family dog. <a href="https://ivyandedgar.com">High Mesa Doodles</a> raised an amazing puppy.
-                  Carol helped us learn about the dog we were getting
-                  and made sure Macie was the right dog. Ivy and Edgar's
-                  process was so simple and our new puppy
-                  was at our door within a week. WE ARE SO HAPPY TO HAVE HER!
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="team-player">
-                <img
-                  src="/static/img/border-collie.jpg"
-                  alt="Thumbnail Image"
-                  class="rounded-circle img-fluid img-raised"
-                />
-                <h4 class="title">Ryan Tompson</h4>
-                <p class="category text-primary">Border Collie</p>
-                <p class="description">
-                  Easiest way to find a dog hands down. From start to finish
-                  Ivy and Edgar does a great job to accommodate for their
-                  customer's needs. Will definitely be recommending to my friends.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="team-player">
-                <img
-                  src="/static/img/australian-shepherd.jpeg"
-                  alt="Thumbnail Image"
-                  class="rounded-circle img-fluid img-raised"
-                />
-                <h4 class="title">Eva Jenner</h4>
-                <p class="category text-primary">Australian Shepherd</p>
-                <p class="description">
-                  It is clear that Ivy and Edgar is dedicated to finding quality breeders.
-                  <a href="">Australian Breeders</a> was amazing throughout the whole process.
-                  We are so happy to have Mack in our life! Highly recommend this site.
-                </p>
-              </div>
-            </div>
+            <CustomerReview
+              v-for="review in reviews"
+              :imageUrl="review.imageUrl"
+              :customerName="review.customerName"
+              :dogBreed="review.dogBreed"
+              :reviewText="review.text"
+            />
           </div>
         </div>
       </div>
@@ -174,23 +130,69 @@
   </div>
 </template>
 <script>
-import { Button, FormGroupInput } from '@/components';
+  import { Button, FormGroupInput } from '@/components';
+  import CustomerReview from './components/CustomerReview';
+
 export default {
   name: 'landing',
   bodyClass: 'landing-page',
   components: {
+    CustomerReview,
     [Button.name]: Button,
     [FormGroupInput.name]: FormGroupInput
   },
   data() {
     return {
+      reviews: [],
       form: {
         firstName: '',
         lastName: '',
         email: ''
       }
     };
+  },
+  methods: {
+    getReviews: function(){
+      // TODO replace this with API Call
+      this.reviews = [
+        {
+          imageUrl: "/static/img/macie.jpg",
+          customerName: "Daniel Lund",
+          dogBreed: "Mini Golden Doodle",
+          text: `
+            This is the best site ever. We found Macie within hours of searching
+            for our new family dog. <a href="https://ivyandedgar.com">High Mesa Doodles</a> raised an amazing puppy.
+            Carol helped us learn about the dog we were getting
+            and made sure Macie was the right dog. Ivy and Edgar's
+            process was so simple and our new puppy
+            was at our door within a week. WE ARE SO HAPPY TO HAVE HER!
+          `
+        },
+        {
+          imageUrl: "/static/img/border-collie.jpg",
+          customerName: "Ryan Tompson",
+          dogBreed: "Mini Golden Doodle",
+          text: `
+            Easiest way to find a dog hands down. From start to finish
+            Ivy and Edgar does a great job to accommodate for their
+            customer's needs. Will definitely be recommending to my friends.
+            `
+        },
+        {
+          imageUrl: "/static/img/australian-shepherd.jpeg",
+          customerName: "Eva Jenner",
+          dogBreed: "Australian Shepherd",
+          text: `
+            It is clear that Ivy and Edgar is dedicated to finding quality breeders.
+            <a href="">Australian Breeders</a> was amazing throughout the whole process.
+            We are so happy to have Mack in our life! Highly recommend this site.
+            `
+        }
+      ]
+    }
+  },
+  beforeMount() {
+    this.getReviews();
   }
 };
 </script>
-<style></style>
