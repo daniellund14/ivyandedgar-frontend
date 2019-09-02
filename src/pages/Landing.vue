@@ -131,7 +131,7 @@
 </template>
 <script>
   import { Button, FormGroupInput } from '@/components';
-  import CustomerReview from './components/CustomerReview';
+  import CustomerReview from '../components/molecules/CustomerReview';
 
 export default {
   name: 'landing',

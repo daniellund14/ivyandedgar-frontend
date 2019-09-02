@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Starter from '../pages/StarterPage.vue';
-import MainNavbar from '../layout/MainNavbar.vue';
-import MainFooter from '../layout/MainFooter.vue';
+import MainNavbar from '../components/molecules/MainNavbar.vue';
+import MainFooter from '../components/molecules/MainFooter.vue';
 
 Vue.use(Router);
 

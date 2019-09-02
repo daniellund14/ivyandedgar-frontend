@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Landing from '../pages/Landing.vue';
-import MainNavbar from '../layout/MainNavbar.vue';
-import MainFooter from '../layout/MainFooter.vue';
+import MainNavbar from '../components/molecules/MainNavbar.vue';
+import MainFooter from '../components/molecules/MainFooter.vue';
 import PageNotFound from '../pages/PageNotFound';
 
 Vue.use(Router);

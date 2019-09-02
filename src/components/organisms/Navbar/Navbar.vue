@@ -32,7 +32,7 @@
 </template>
 <script>
 import { CollapseTransition } from 'vue2-transitions';
-import NavbarToggleButton from './NavbarToggleButton';
+import NavbarToggleButton from '../../atoms/NavBar/NavbarToggleButton';
 let resizeTimeout;
 function resizeThrottler(actualResizeHandler) {
   // ignore resize events as long as an actualResizeHandler execution is in the queue
