@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="page-header page-header-small">
+    <div class="page-header page-header-small" style="margin-top: 60px">
       <parallax
         class="page-header-image"
         style="background-image: url('/static/img/landing-page-1.jpg')"
@@ -161,7 +161,7 @@ export default {
           dogBreed: "Mini Golden Doodle",
           text: `
             This is the best site ever. We found Macie within hours of searching
-            for our new family dog. <a href="https://ivyandedgar.com">High Mesa Doodles</a> raised an amazing puppy.
+            for our new family dog. <a href="/high-mesa">High Mesa Doodles</a> raised an amazing puppy.
             Carol helped us learn about the dog we were getting
             and made sure Macie was the right dog. Ivy and Edgar's
             process was so simple and our new puppy

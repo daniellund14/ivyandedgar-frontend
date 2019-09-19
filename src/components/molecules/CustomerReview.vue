@@ -16,10 +16,16 @@
   export default {
     name: 'CustomerReview',
     props: {
-      imageUrl: '',
-      customerName: '',
-      dogBreed: '',
-      reviewText: ``
+      imageUrl: {
+        type: String,
+        default: "Thumbnail Image"
+      },
+      customerName: {
+        type: String,
+        required: true
+      },
+      dogBreed: String,
+      reviewText: String
     }
   };
 </script>

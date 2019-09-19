@@ -18,7 +18,7 @@
           navMenuClasses
         ]"
         v-if="$slots['navbar-menu'] || $scopedSlots['navbar-menu']"
-        data-color="orange"
+        data-color="blue"
         id="navigation"
       >
         <slot name="before-menu"></slot>
@@ -32,7 +32,7 @@
 </template>
 <script>
 import { CollapseTransition } from 'vue2-transitions';
-import NavbarToggleButton from '../../atoms/NavBar/NavbarToggleButton';
+import NavbarToggleButton from '../atoms/NavBar/NavbarToggleButton';
 let resizeTimeout;
 function resizeThrottler(actualResizeHandler) {
   // ignore resize events as long as an actualResizeHandler execution is in the queue

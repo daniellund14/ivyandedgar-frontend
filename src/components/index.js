@@ -12,7 +12,7 @@ import DropDown from './atoms/Dropdown.vue';
 import Card from './atoms/Cards/Card.vue';
 import Collapse from './atoms/Collapse/Collapse.vue';
 import CollapseItem from './atoms/Collapse/CollapseItem.vue';
-import Navbar from './organisms/Navbar/Navbar';
+import Navbar from './molecules/Navbar';
 import NavLink from './atoms/NavBar/NavLink';
 import NavbarToggleButton from './atoms/NavBar/NavbarToggleButton';
 import TabPane from './atoms/Tabs/Tab.vue';

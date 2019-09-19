@@ -21,10 +21,12 @@ import App from './App.vue';
 // You can change this import to `import router from './starterRouter'` to quickly start development from a blank layout.
 import router from './router/router';
 import NowUiKit from './plugins/now-ui-kit';
+import Vuelidate from 'vuelidate';
 
 Vue.config.productionTip = false;
 
 Vue.use(NowUiKit);
+Vue.use(Vuelidate);
 
 new Vue({
   router,
