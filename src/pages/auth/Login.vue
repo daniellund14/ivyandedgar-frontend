@@ -1,5 +1,5 @@
 <template>
-  <div class="page-header clear-filter" filter-color="black">
+  <div class="page-header clear-filter" filter-color="blue">
     <div
       class="page-header-image"
       style="background-image: url('/static/img/white-background-pets.png')"
@@ -21,8 +21,7 @@
                 placeholder="Email..."
                 v-model="email"
                 @blur="$v.email.$touch()"
-              >
-              </fg-input>
+              ></fg-input>
               <fg-input
                 class="no-border input-lg"
                 addon-left-icon="now-ui-icons ui-1_lock-circle-open"
@@ -45,12 +44,12 @@
               </div>
               <div class="pull-left">
                 <h6>
-                  <a href="/register" class="link footer-link">Create Account</a>
+                  <router-link to="/register" class="link footer-link">Create Account</router-link>
                 </h6>
               </div>
               <div class="pull-right">
                 <h6>
-                  <a href="/help" class="link footer-link">Need Help?</a>
+                  <router-link to="/help" class="link footer-link">Need Help?</router-link>
                 </h6>
               </div>
             </template>
@@ -63,8 +62,8 @@
 </template>
 <script>
 import { Card, Button, FormGroupInput } from '@/components';
-import LoginForm from '../components/organisms/LoginForm';
-import MainFooter from '../components/organisms/MainFooter';
+import LoginForm from '../../components/organisms/LoginForm';
+import MainFooter from '../../components/organisms/MainFooter';
 import { required, email, minLength } from 'vuelidate/lib/validators'
 export default {
   name: 'login-page',

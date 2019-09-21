@@ -18,31 +18,29 @@
         icon="now-ui-icons design_app"
         class="nav-item"
       >
+        <nav-link to="/search">
+          Search
+        </nav-link>
         <nav-link to="/list">
-          <i class="now-ui-icons"></i> List a Dog
+          List a Dog
         </nav-link>
-        <nav-link
-          to="/purchase"
-        >
-          <i class="now-ui-icons"></i> Purchase a Dog
-        </nav-link>
-        <nav-link
-          to="/concierge"
-        >
-          <i class="now-ui-icons"></i> Dog Concierge
+        <nav-link to="/purchase">
+          Purchase a Dog</nav-link>
+        <nav-link to="/concierge">
+          Dog Concierge
         </nav-link>
       </drop-down>
       <drop-down
               tag="li"
               title="Profile"
-              icon="now-ui-icons"
+              icon="now-ui-icons users_circle-08"
               class="nav-item"
       >
-        <nav-link to="/register">
-          <i class="now-ui-icons"></i> Create an Account
-        </nav-link>
         <nav-link to="/login">
-          <i class="now-ui-icons"></i> Login
+          <i class="now-ui-icons users_single-02"></i> Login
+        </nav-link>
+        <nav-link to="/register">
+          <i class="now-ui-icons ui-1_simple-add"></i> Create an Account
         </nav-link>
       </drop-down>
     </template>
