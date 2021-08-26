@@ -31,7 +31,7 @@
       </nav>
       <div class="copyright">
         &copy; {{ year }}, Designed by
-        <a href="https:///www.invisionapp.com" target="_blank" rel="noopener"
+        <a href="https://ivyandedgar.com/about" target="_blank" rel="noopener"
           >Ivy and Edgar LLC</a>
       </div>
     </div>
